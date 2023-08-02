@@ -21,12 +21,16 @@ public class RacingCarTest {
 
     @Test
     public void positionMove() throws Exception {
-        //given
         RacingCar racingCar = new RacingCar("car1");
-        //when
         racingCar.move(4);
-        //then
         assertThat(racingCar.getPosition()).isEqualTo(1);
+    }
+
+    @Test
+    public void positionNoMove() throws Exception {
+        RacingCar racingCar = new RacingCar("car1");
+        racingCar.move(3);
+        assertThat(racingCar.getPosition()).isEqualTo(0);
     }
 
 }
