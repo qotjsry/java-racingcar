@@ -2,14 +2,24 @@ package racingcar_new;
 
 import java.util.Objects;
 
+
 public class Car {
-    private String name;
+    private CarName name;
+    private int position;
 
     public Car(String name) {
-        if(name.length() > 5){
-            throw new IllegalArgumentException("자동차 이름은 5자 이하만 가능합니다.");
-        }
-        this.name = name;
+        this.name = new CarName(name);
+        this.position = 0;
+    }
+
+    public Car(String name, int position) {
+        this.name = new CarName(name);
+        this.position = position;
+    }
+
+    public void move(int randomNumber) {
+        if(randomNumber >= 4)
+            this.position++;
     }
 
     @Override
@@ -21,11 +31,11 @@ public class Car {
             return false;
         }
         Car car = (Car) o;
-        return Objects.equals(name, car.name);
+        return position == car.position && Objects.equals(name, car.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(name, position);
     }
 }
