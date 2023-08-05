@@ -6,17 +6,32 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
+import racingcar.RacingCar;
 
 public class RacingGame {
-    private List<Car> cars;
+    private Cars cars;
+    private int racingCount;
 
-    public RacingGame(String... carNames) {
-        this(Arrays.stream(carNames)
-            .map(Car::new)
-            .collect(Collectors.toList()));
-    }
-    public RacingGame(List<Car> cars) {
+    public RacingGame (Cars cars, int racingCount){
         this.cars = cars;
+        this.racingCount = racingCount;
+    }
+
+    public void game(){
+        for(int i=0;i<racingCount;i++){
+            cars.move();
+        }
+        cars.winner();
+    }
+
+    public int getMaxPosition(List<Car> cars){
+        int maxPosition = 0;
+        for (Car car : cars) {
+            if(car.getPosition() > maxPosition){
+                maxPosition = car.getPosition();
+            }
+        }
+        return maxPosition;
     }
 
     @Override

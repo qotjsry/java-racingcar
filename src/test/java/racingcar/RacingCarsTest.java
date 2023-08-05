@@ -23,8 +23,9 @@ public class RacingCarsTest {
         RacingCars racingCars = new RacingCars("car1,car2,car3");
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("car1", 1));
-        cars.add(new Car("car1", 2));
-        cars.add(new Car("car1", 3));
+        cars.add(new Car("car2", 2));
+        cars.add(new Car("car3", 3));
+        racingCars.getWinners();
         assertThat(racingCars.getWinners()).isEqualTo(Arrays.asList("car3"));
     }
 

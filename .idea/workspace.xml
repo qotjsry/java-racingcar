@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45f465f7-5b66-478d-9985-dc5b5c73c292" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/racingcar_new/RacingGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/racingcar_new/RacingGameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/racingcar_new/WinnerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/racingcar_new/Cars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/racingcar_new/CarsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/racingcar_new/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/racingcar_new/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/racingcar_new/CarName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/racingcar_new/CarName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/racingcar_new/RacingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/racingcar_new/RacingGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/racingcar/RacingCarsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/racingcar/RacingCarsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/racingcar_new/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/racingcar_new/CarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/racingcar_new/RacingGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/racingcar_new/RacingGameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <recent name="racingcar" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CarTest">
+  <component name="RunManager" selected="Gradle.RacingCarsTest.getWinnerTest">
     <configuration name="CarTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -118,7 +119,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CarTest.setCarNameException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CarsTest.carNameSet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -131,7 +132,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;racingcar_new.CarTest.setCarNameException&quot;" />
+            <option value="&quot;racingcar_new.CarsTest.carNameSet&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -141,7 +142,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CarTest.setCarPosition" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RacingCarsTest.getWinnerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -154,7 +155,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;racingcar_new.CarTest.setCarPosition&quot;" />
+            <option value="&quot;racingcar.RacingCarsTest.getWinnerTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -189,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RacingCarsTest.getWinnerTest" />
+        <item itemvalue="Gradle.CarsTest.carNameSet" />
         <item itemvalue="Gradle.CarTest" />
         <item itemvalue="Gradle.CarTest.moveCar" />
         <item itemvalue="Gradle.RacingGameTest.racingGameTest" />
-        <item itemvalue="Gradle.CarTest.setCarPosition" />
-        <item itemvalue="Gradle.CarTest.setCarNameException" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +206,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690805841139</updated>
-      <workItem from="1690805842441" duration="11918000" />
+      <workItem from="1690805842441" duration="18426000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,13 @@
 package racingcar_new;
 
 import java.util.Objects;
+import java.util.Random;
 
 
 public class Car {
+
+    public static final int MOVE_STANDARD_NUMBER = 4;
+    public static final int MAX_BOUND = 10;
     private CarName name;
     private int position;
 
@@ -17,9 +21,27 @@ public class Car {
         this.position = position;
     }
 
+    public String getName() {
+        return name.getName();
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
     public void move(int randomNumber) {
-        if(randomNumber >= 4)
+        if(randomNumber >= MOVE_STANDARD_NUMBER)
             this.position++;
+    }
+
+    public void move(){
+        if(makeRandomNumber() >= MOVE_STANDARD_NUMBER)
+            this.position++;
+    }
+
+    public int makeRandomNumber(){
+        Random random = new Random();
+        return random.nextInt(MAX_BOUND);
     }
 
     @Override
@@ -37,5 +59,9 @@ public class Car {
     @Override
     public int hashCode() {
         return Objects.hash(name, position);
+    }
+
+    public boolean isWinnerCar(int maxPosition) {
+        return this.position == maxPosition;
     }
 }
