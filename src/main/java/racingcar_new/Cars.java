@@ -13,6 +13,10 @@ public class Cars {
         this.cars = getCarNames(carNames);
     }
 
+    public Cars(List<Car> carList){
+        this.cars = carList;
+    }
+
     public List<Car> getCarNames(String carNames) {
         String[] carNameArray = carNames.split(",");
         for (String carName : carNameArray) {
@@ -23,26 +27,37 @@ public class Cars {
 
     public void move(){
         for(Car car : cars) {
+            ResultView resultView = new ResultView(car);
             car.move();
+            resultView.resultView();
         }
     }
     public int getMaxPosition(){
         int maxPosition = 0;
         for(Car car : cars){
-            if(car.getPosition() > maxPosition) {
-                maxPosition = car.getPosition();
-            }
+            maxPosition = compareMaxPosition(car,maxPosition);
         }
         return maxPosition;
     }
-    public List<Car> winner() {
-        List<Car> winner = new ArrayList<>();
-        int maxPosition = getMaxPosition();
+
+    public int compareMaxPosition(Car car,int maxPosition){
+        if(car.getPosition() > maxPosition){
+            maxPosition = car.getPosition();
+        }
+        return maxPosition;
+    }
+    public List<String> winner() {
+        List<String> winner = new ArrayList<>();
         for (Car car : cars) {
-            if (car.isWinnerCar(maxPosition)) {
-                winner.add(car);
-            }
+            getWinnerName(car,winner);
         }
         return winner;
+    }
+
+    public void getWinnerName(Car car,List<String> winners){
+        int maxPosition = getMaxPosition();
+        if(car.isWinnerCar(maxPosition)){
+            winners.add(car.getName());
+        }
     }
 }

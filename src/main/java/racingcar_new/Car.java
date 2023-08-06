@@ -44,6 +44,10 @@ public class Car {
         return random.nextInt(MAX_BOUND);
     }
 
+    public boolean isWinnerCar(int maxPosition) {
+        return this.position == maxPosition;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -61,7 +65,5 @@ public class Car {
         return Objects.hash(name, position);
     }
 
-    public boolean isWinnerCar(int maxPosition) {
-        return this.position == maxPosition;
-    }
+
 }

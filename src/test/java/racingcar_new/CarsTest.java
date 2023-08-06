@@ -7,10 +7,14 @@ import org.junit.jupiter.api.Test;
 
 public class CarsTest {
     @Test
-    public void carNameSet() throws Exception {
-        Cars cars  = new Cars("car1,car2,car3");
-        List<Car> carList = new ArrayList<>();
-        carList.add(Car)
-        Assertions.assertThat(cars.getCarNames("car1,car2,car3")).isInstanceOf(cars.getClass());
+    public void getWinnerTest() throws Exception {
+        Car car = new Car("pobi");
+        car.move(4);
+        List<Car> cars = new ArrayList<>();
+        cars.add(car);
+        Cars cars1 = new Cars(cars);
+        cars1.winner();
+        Assertions.assertThat(cars1.winner()).isEqualTo(new ArrayList<String>(){{add("pobi");}});
+
     }
 }
